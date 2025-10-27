@@ -77,4 +77,4 @@ function Events() {
 	);
 }
 
-export default EventsPage;
+export default Events;

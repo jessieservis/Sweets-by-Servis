@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/home';
-import About from './pages/about';
-import Products from './pages/products';
-import Events from './pages/events';
-import Registration from './pages/registration';
+import Home from './pages/home/home.jsx';
+import About from './pages/about/about.jsx';
+import Products from './pages/products/products.jsx';
+import Events from './pages/events/events.jsx';
+import Registration from './pages/registration/registration.jsx';
 
 function App() {
 	return (

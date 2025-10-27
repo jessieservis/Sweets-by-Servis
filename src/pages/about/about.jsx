@@ -81,7 +81,7 @@ function About() {
 					</div>
 					<div className='cta-content'>
 						<h2>Want To Know More About Us?</h2>
-						<Link to='/register' className='btn-cta'>
+						<Link to='/registration' className='btn-cta'>
 							Contact Us
 						</Link>
 					</div>
@@ -91,4 +91,4 @@ function About() {
 	);
 }
 
-export default AboutPage;
+export default About;
