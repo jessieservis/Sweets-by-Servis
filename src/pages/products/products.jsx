@@ -1,20 +1,42 @@
 import './products.css';
 
 function Products() {
+	const scrollToSection = (id) => {
+		const el = document.getElementById(id)
+		el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+	}
 	return (
 		<div className='products-page'>
 			<section className='products-hero-section'>
 				<div className='products-hero-container'>
 					<h1>See the Sweets</h1>
 					<div className='category-tabs'>
-						<button className='tab-btn active'>Cookies</button>
-						<button className='tab-btn'>Cupcakes</button>
-						<button className='tab-btn'>Rice Crispy Treats</button>
+						<button
+							className='tab-btn'
+							onClick={() => scrollToSection('Cookies')}
+						>
+							Cookies
+						</button>
+						<button
+							className='tab-btn'
+							onClick={() => scrollToSection('Cupcakes')}
+						>
+							Cupcakes
+						</button>
+						<button
+							className='tab-btn'
+							onClick={() => scrollToSection('Rice Crispy Treats')}
+						>
+							Rice Crispy Treats
+						</button>
 					</div>
 				</div>
 			</section>
 
-			<section className='category-section'>
+			<section
+				className='category-section alt-bg'
+				id='Cookies'
+			>
 				<div className='category-container'>
 					<h2>Cookies</h2>
 					<div className='products-display'>
@@ -40,7 +62,10 @@ function Products() {
 				</div>
 			</section>
 
-			<section className='category-section alt-bg'>
+			<section
+				className='category-section'
+				id='Cupcakes'
+			>
 				<div className='category-container'>
 					<h2>Cupcakes</h2>
 					<div className='products-display'>
@@ -66,7 +91,10 @@ function Products() {
 				</div>
 			</section>
 
-			<section className='category-section alt-bg'>
+			<section
+				className='category-section alt-bg'
+				id='Rice Crispy Treats'
+			>
 				<div className='category-container'>
 					<h2>Rice Crispy Treats</h2>
 					<div className='products-display'>
