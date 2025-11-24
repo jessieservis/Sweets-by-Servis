@@ -177,6 +177,20 @@
 	gap: 8px;
 	background: #fff; 
 }
+
+/* Main layout: calendar and carousel side-by-side */
+.events-main {
+	display: flex;
+	gap: 28px;
+	align-items: flex-start;
+}
+.events-main-left {
+	width: 360px; /* fixed calendar column */
+	flex: 0 0 360px;
+}
+.events-main-right {
+	flex: 1 1 auto;
+}
 .calendar-weekday {
 	text-align: center;
 	font-weight: 600;
@@ -228,8 +242,8 @@
 .carousel::-webkit-scrollbar { height: 10px; }
 .carousel::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 8px; }
 .carousel-item {
-	min-width: 300px;
-	max-width: 320px;
+	min-width: 240px;
+	max-width: 260px;
 	background: #fff;
 	border-radius: 12px;
 	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
@@ -241,7 +255,7 @@
 	flex-direction: column;
 }
 .carousel-item.active { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
-.carousel-item img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.carousel-item img { width: 100%; height: 120px; object-fit: cover; display: block; }
 .carousel-item-info { padding: 12px; }
 .carousel-item-info h3 { margin: 0 0 6px 0; color: #ff6b9d; font-size: 18px; }
 .carousel-item-info .meta { margin: 0 0 8px 0; color: #777; font-size: 14px; }
@@ -249,7 +263,9 @@
 
 @media (max-width: 768px) {
 	.day-cell { min-height: 68px; }
-	.carousel-item { min-width: 260px; }
+	.carousel-item { min-width: 220px; }
+	.events-main { flex-direction: column; }
+	.events-main-left { width: 100%; flex: none; }
 }
 
 /* react-day-picker: show a large centered star that fills the day square */
