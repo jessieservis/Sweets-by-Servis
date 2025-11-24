@@ -2,6 +2,11 @@
 	width: 100%;
 }
 
+/* Ensure paddings don't cause unexpected overflow */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 .events-hero {
 	background: linear-gradient(180deg, #fff5f7 0%, #ffeef2 100%);
 	padding: 60px 0;
@@ -10,7 +15,7 @@
 .events-hero-container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 24px;
 	text-align: center;
 }
 
@@ -28,7 +33,7 @@
 .events-list-container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 20px;
 }
 
 .event-cards-grid {
@@ -71,7 +76,7 @@
 .event-detail-container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 20px;
 	display: flex;
 	align-items: center;
 	gap: 80px;
@@ -185,11 +190,13 @@
 	align-items: flex-start;
 }
 .events-main-left {
-	width: 360px; /* fixed calendar column */
-	flex: 0 0 360px;
+	width: 320px; /* fixed calendar column */
+	flex: 0 0 320px;
 }
 .events-main-right {
 	flex: 1 1 auto;
+	min-width: 0; /* Allow flex item to shrink below content size */
+	overflow: hidden; /* Prevent content from overflowing */
 }
 .calendar-weekday {
 	text-align: center;
@@ -232,17 +239,33 @@
 /* Carousel styles */
 .events-carousel-section { padding: 24px 0 40px 0; background: #fff5f7; }
 .carousel-title { color: #ff6b9d; margin: 0 0 12px 0; }
+
+.carousel-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 0; /* Allow wrapper to shrink */
+	overflow: hidden; /* Contain carousel overflow */
+}
+
 .carousel {
 	display: flex;
 	gap: 16px;
-	overflow-x: auto;
+	overflow-x: hidden; /* hide items that don't fit on screen */
 	padding: 12px 6px;
 	scroll-snap-type: x mandatory;
+	justify-content: center; /* Center the carousel items */
+	align-items: flex-start;
+	flex: 1;
+	min-width: 0; /* Critical: allow carousel to shrink */
+	transition: transform 0.5s ease-in-out;
 }
 .carousel::-webkit-scrollbar { height: 10px; }
 .carousel::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 8px; }
 .carousel-item {
-	min-width: 240px;
+	/* responsive width: shrink on small screens, grow to a max on larger screens */
+	min-width: clamp(180px, 24vw, 260px);
 	max-width: 260px;
 	background: #fff;
 	border-radius: 12px;
@@ -253,6 +276,7 @@
 	transition: transform 0.2s, box-shadow 0.2s;
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 }
 .carousel-item.active { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
 .carousel-item img { width: 100%; height: 120px; object-fit: cover; display: block; }
@@ -261,11 +285,61 @@
 .carousel-item-info .meta { margin: 0 0 8px 0; color: #777; font-size: 14px; }
 .carousel-item-info .desc { margin: 0; color: #555; font-size: 14px; }
 
+.carousel-arrow {
+	background: #fff;
+	border: 2px solid #ff6b9d;
+	color: #ff6b9d;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s;
+	flex-shrink: 0;
+	line-height: 1;
+	padding: 0;
+	user-select: none;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+	background: #ff6b9d;
+	color: #fff;
+	transform: scale(1.1);
+}
+
+.carousel-arrow:active:not(:disabled) {
+	transform: scale(0.95);
+}
+
+.carousel-arrow:disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
+	border-color: #ccc;
+	color: #ccc;
+}
+
+.carousel-arrow-left {
+	margin-right: 4px;
+}
+
+.carousel-arrow-right {
+	margin-left: 4px;
+}
+
 @media (max-width: 768px) {
 	.day-cell { min-height: 68px; }
 	.carousel-item { min-width: 220px; }
 	.events-main { flex-direction: column; }
 	.events-main-left { width: 100%; flex: none; }
+	
+	.carousel-arrow {
+		width: 36px;
+		height: 36px;
+		font-size: 24px;
+	}
 }
 
 /* react-day-picker: show a large centered star that fills the day square */

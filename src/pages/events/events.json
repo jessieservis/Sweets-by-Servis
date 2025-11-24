@@ -1,14 +1,22 @@
 [
 	{
 		"id": 1,
+		"title": "Fall Baking Workshop",
+		"date": "2025-11-30",
+		"time": "1:00 PM - 3:00 PM",
+		"img": "fallBaking.jpg",
+		"description": "Join us for a fun fall-themed baking workshop!"
+	},
+	{
+		"id": 2,
 		"title": "Holiday Cookie Decorating",
-		"date": "2025-12-05",
+		"date": "2025-12-08",
 		"time": "10:00 AM - 12:00 PM",
 		"img": "https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=800",
 		"description": "Decorate holiday cookies with us! All ages welcome."
 	},
 	{
-		"id": 2,
+		"id": 3,
 		"title": "Cupcake Masterclass",
 		"date": "2025-12-12",
 		"time": "2:00 PM - 4:00 PM",
@@ -16,15 +24,15 @@
 		"description": "Learn professional piping techniques and flavor combos."
 	},
 	{
-		"id": 3,
+		"id": 4,
 		"title": "Cake Tasting Night",
-		"date": "2025-12-19",
+		"date": "2025-12-21",
 		"time": "6:00 PM - 8:00 PM",
 		"img": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800",
 		"description": "A tasting event featuring our seasonal cakes."
 	},
 	{
-		"id": 4,
+		"id": 5,
 		"title": "New Year Cupcake Pop-up",
 		"date": "2026-01-03",
 		"time": "11:00 AM - 2:00 PM",
