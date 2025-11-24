@@ -97,7 +97,10 @@ export default function Events() {
 					<div className='events-main-left'>
 						<Calendar
 							events={EVENTS}
-							onDaySelect={(idx) => setActiveIndex(idx)}
+							onDaySelect={(idx) => {
+								setActiveIndex(idx)
+								setDisplayedEvents(getDisplayWindow(idx))
+							}}
 						/>
 					</div>
 
