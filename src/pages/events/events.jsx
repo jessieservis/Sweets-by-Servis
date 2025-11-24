@@ -86,8 +86,11 @@ export default function Events() {
 
 	return (
 		<div className='events-page'>
-			<section className='events-hero'>
-				<div className='events-hero-container'>
+			<section className='section-padding bg-gradient-light'>
+				<div
+					className='container events-hero-container'
+					style={{ textAlign: 'center' }}
+				>
 					<h1>Upcoming Events</h1>
 				</div>
 			</section>
@@ -161,8 +164,8 @@ export default function Events() {
 				</div>
 			</section>
 
-			<section className='event-detail-section'>
-				<div className='event-detail-container'>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container event-detail-container'>
 					<div className='event-detail-image'>
 						<img
 							src={EVENTS[activeIndex].img}
@@ -170,8 +173,10 @@ export default function Events() {
 						/>
 					</div>
 					<div className='event-detail-content'>
-						<h2>{EVENTS[activeIndex].title}</h2>
-						<p>{EVENTS[activeIndex].description}</p>
+						<h2 className='heading-large heading-pink'>
+							{EVENTS[activeIndex].title}
+						</h2>
+						<p className='text-body'>{EVENTS[activeIndex].description}</p>
 						<div className='event-details'>
 							<p>
 								<strong>Event Date:</strong>{' '}

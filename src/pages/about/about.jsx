@@ -4,91 +4,84 @@ import './about.css';
 function About() {
 	return (
 		<div className='about-page'>
-			<section className='about-hero-section'>
-				<div className='about-hero-container'>
-					<img
-						src='https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=800'
-						alt='Dessert showcase'
-					/>
-				</div>
-			</section>
-
-			<section className='about-section'>
-				<div className='about-container'>
+			<section className='section-padding bg-white'>
+				<div className='container about-container'>
+					<div className='about-image'>
+						<img
+							src='logo.png'
+							alt='Sweets by Servis Logo'
+						/>
+					</div>
 					<div className='about-content'>
-						<h2>About Us</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur. Nulla arcu
-							odio arcu et elementum ullamcorper in amet ultrices.
-							Lorem ipsum dolor sit amet consectetur. Nulla arcu
-							odio arcu et elementum ullamcorper in amet ultrices.
+						<h2 className='heading-large heading-dark'>About Us</h2>
+						<p className='text-body'>
+							Sweets by Servis is a family-owned bakery dedicated to creating
+							delicious and beautiful desserts for all occasions. Founded in
+							2010, we have been serving our community with high-quality baked
+							goods made from the finest ingredients.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section className='mission-section'>
-				<div className='mission-container'>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container mission-container'>
 					<div className='mission-content'>
-						<h2>Our Mission</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur. Neque tortor
-							massa lorem dolor cras donec sed vitae tortor. Sit
-							tellus commodo eget viverra. Tempus posuere leo
-							augue et adipiscing volutpat egestas purus leo. Sit
-							elementum pellentesque nunc quis ac. Feugiat lacinia
-							pellentesque donec aliquam arcu pulvinar.
+						<h2 className='heading-large heading-pink'>Our Mission</h2>
+						<p className='text-body'>
+							Our mission is to bring joy and sweetness to every event through
+							our handcrafted desserts. We believe that every celebration
+							deserves a special treat, and we are committed to making each
+							dessert not only delicious but also a work of art.
 						</p>
 					</div>
 					<div className='mission-image'>
 						<img
-							src='https://images.pexels.com/photos/1028704/pexels-photo-1028704.jpeg?auto=compress&cs=tinysrgb&w=600'
-							alt='Beautiful layered dessert'
+							src='PBChocolateRiceCrispyTreat.jpg'
+							alt='Peanut butter chocolate rice crispy treats'
 						/>
 					</div>
 				</div>
 			</section>
 
-			<section className='promise-section'>
-				<div className='promise-container'>
+			<section className='section-padding bg-white'>
+				<div className='container promise-container'>
 					<div className='promise-image'>
 						<img
-							src='https://images.pexels.com/photos/1120970/pexels-photo-1120970.jpeg?auto=compress&cs=tinysrgb&w=600'
-							alt='Decorated cake'
+							src='StrawberryCrunchCupcakes.jpg'
+							alt='Strawberry crunch cupcakes'
 						/>
 					</div>
 					<div className='promise-content'>
-						<h2>Our Promise</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur. Neque tortor
-							massa lorem dolor cras donec sed vitae tortor. Sit
-							tellus commodo eget viverra. Tempus posuere leo
-							augue et adipiscing volutpat egestas purus leo. Sit
-							elementum pellentesque nunc quis ac. Feugiat lacinia
-							pellentesque donec aliquam arcu pulvinar.
+						<h2 className='heading-large heading-pink'>Our Promise</h2>
+						<p className='text-body'>
+							We promise to deliver exceptional quality and taste in every
+							dessert. When shopping at Sweets by Servis, you can expect high
+							quality ingredients, safe preparation practices, and clean
+							packaging. Your satisfaction is our top priority, and we strive to
+							exceed your expectations with every purchase.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section className='cta-section'>
-				<div className='cta-container'>
-					<div className='cta-image'>
-						<img
-							src='https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800'
-							alt='Dessert on plate'
-						/>
-					</div>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container cta-container'>
 					<div className='cta-content'>
-						<h2>Want To Know More About Us?</h2>
-						<Link to='/registration' className='btn-cta'>
+						<h2 className='heading-large heading-pink'>
+							Want To Know More About Us?
+						</h2>
+						<Link
+							to='/registration'
+							className='btn btn-pink'
+						>
 							Contact Us
 						</Link>
 					</div>
 				</div>
 			</section>
 		</div>
-	);
+	)
 }
 
 export default About;

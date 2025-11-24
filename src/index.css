@@ -22,3 +22,105 @@ button {
   border: none;
   outline: none;
 }
+
+/* Global page wrapper */
+.about-page,
+.home-page,
+.products-page,
+.events-page,
+.registration-page {
+  width: 100%;
+}
+
+/* Global section padding */
+.section-padding {
+  padding: 80px 0;
+}
+
+/* Global backgrounds */
+.bg-white {
+  background: #fff;
+}
+
+.bg-gradient-pink {
+  background: linear-gradient(180deg, #fff5f7 0%, #ffe5ec 100%);
+}
+
+.bg-gradient-light {
+  background: linear-gradient(180deg, #fff5f7 0%, #ffeef2 100%);
+}
+
+/* Global container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Global flex layouts */
+.flex-center {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Global text styles */
+.text-body {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.heading-large {
+  font-size: 36px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.heading-pink {
+  color: #ff6b9d;
+}
+
+.heading-dark {
+  color: #333;
+}
+
+/* Global image containers */
+.image-container {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Global buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-green {
+  background: #a8d5ba;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background: #92c5a6;
+}
+
+.btn-pink {
+  background: #ff6b9d;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background: #ff5589;
+}
