@@ -42,7 +42,7 @@ function Products() {
 					<div className='products-display'>
 						<div className='product-image-large'>
 							<img
-								src='public\chocolateChipCookies.jpg'
+								src='\chocolateChipCookies.jpg'
 								alt='Chocolate chip cookies'
 							/>
 							<div className='product-label'>
@@ -51,7 +51,7 @@ function Products() {
 						</div>
 						<div className='product-image-large'>
 							<img
-								src='public\peanutButterCookies.jpg'
+								src='\peanutButterCookies.jpg'
 								alt='Peanut butter cookies'
 							/>
 							<div className='product-label'>
@@ -71,7 +71,7 @@ function Products() {
 					<div className='products-display'>
 						<div className='product-image-large'>
 							<img
-								src='public\cookiesAndCreamCupcakes.jpg'
+								src='\cookiesAndCreamCupcakes.jpg'
 								alt='Cookies and Cream Cupcakes'
 							/>
 							<div className='product-label'>
@@ -80,7 +80,7 @@ function Products() {
 						</div>
 						<div className='product-image-large'>
 							<img
-								src='public\StrawberryCrunchCupcakes.jpg'
+								src='\StrawberryCrunchCupcakes.jpg'
 								alt='Strawberry Crunch Cupcakes'
 							/>
 							<div className='product-label'>
@@ -100,7 +100,7 @@ function Products() {
 					<div className='products-display'>
 						<div className='product-image-large'>
 							<img
-								src='public\PBChocolateRiceCrispyTreat.jpg'
+								src='\PBChocolateRiceCrispyTreat.jpg'
 								alt='Peanut Butter Chocolate Rice Crispy Treat'
 							/>
 							<div className='product-label'>
@@ -109,7 +109,7 @@ function Products() {
 						</div>
 						<div className='product-image-large'>
 							<img
-								src='public\riceCrispyTreat.jpg'
+								src='\riceCrispyTreat.jpg'
 								alt='Classic Rice Crispy Treat'
 							/>
 							<div className='product-label'>
