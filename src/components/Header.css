@@ -22,6 +22,11 @@
   color: #FF6B9D;
 }
 
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
 .nav {
   display: flex;
   gap: 40px;
