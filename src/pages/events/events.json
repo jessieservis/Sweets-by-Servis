@@ -5,7 +5,7 @@
 		"date": "2025-11-30",
 		"time": "1:00 PM - 3:00 PM",
 		"img": "fallBaking.jpg",
-		"description": "Join us for a fun fall-themed baking workshop!"
+		"description": "Join us for a fun fall-themed baking workshop! Learn to make seasonal treats with your friends, family, and neighbors. All skill levels welcome. This event costs $5 per person and is free for kids under 12."
 	},
 	{
 		"id": 2,
@@ -13,7 +13,7 @@
 		"date": "2025-12-08",
 		"time": "10:00 AM - 12:00 PM",
 		"img": "christmasCookies.webp",
-		"description": "Decorate holiday cookies with us! All ages welcome."
+		"description": "Decorate holiday cookies with us! All ages welcome. Bring your friends and family for a festive morning of creativity and fun. Materials provided. Cost is $5 per person."
 	},
 	{
 		"id": 3,
@@ -21,7 +21,7 @@
 		"date": "2025-12-12",
 		"time": "2:00 PM - 4:00 PM",
 		"img": "cupcakes.jpg",
-		"description": "Learn professional piping techniques and flavor combos."
+		"description": "Learn professional piping techniques and flavor combos. Perfect for aspiring bakers and cupcake enthusiasts. This event costs $10 per person."
 	},
 	{
 		"id": 4,
@@ -29,7 +29,7 @@
 		"date": "2025-12-21",
 		"time": "6:00 PM - 8:00 PM",
 		"img": "cookies.jpg",
-		"description": "A tasting event featuring our yearly variety of cookies."
+		"description": "A tasting event featuring our yearly variety of cookies. Bring your friends and family to sample and vote for your favorites. This event is free for everyone."
 	},
 	{
 		"id": 5,
@@ -37,6 +37,6 @@
 		"date": "2026-01-03",
 		"time": "11:00 AM - 2:00 PM",
 		"img": "parfaits.jpg",
-		"description": "Start the year sweet — gather with your community and enjoy delicious treats together."
+		"description": "Start the year sweet — gather with your community and enjoy delicious treats together. All are welcome. This event is free, but bring your own dessert or snack to share."
 	}
 ]
