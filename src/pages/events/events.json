@@ -1,0 +1,34 @@
+[
+	{
+		"id": 1,
+		"title": "Holiday Cookie Decorating",
+		"date": "2025-12-05",
+		"time": "10:00 AM - 12:00 PM",
+		"img": "https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=800",
+		"description": "Decorate holiday cookies with us! All ages welcome."
+	},
+	{
+		"id": 2,
+		"title": "Cupcake Masterclass",
+		"date": "2025-12-12",
+		"time": "2:00 PM - 4:00 PM",
+		"img": "https://images.pexels.com/photos/1120970/pexels-photo-1120970.jpeg?auto=compress&cs=tinysrgb&w=800",
+		"description": "Learn professional piping techniques and flavor combos."
+	},
+	{
+		"id": 3,
+		"title": "Cake Tasting Night",
+		"date": "2025-12-19",
+		"time": "6:00 PM - 8:00 PM",
+		"img": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800",
+		"description": "A tasting event featuring our seasonal cakes."
+	},
+	{
+		"id": 4,
+		"title": "New Year Cupcake Pop-up",
+		"date": "2026-01-03",
+		"time": "11:00 AM - 2:00 PM",
+		"img": "https://images.pexels.com/photos/1028704/pexels-photo-1028704.jpeg?auto=compress&cs=tinysrgb&w=800",
+		"description": "Start the year sweet — grab a special cupcake."
+	}
+]
