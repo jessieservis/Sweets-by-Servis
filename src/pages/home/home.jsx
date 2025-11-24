@@ -4,9 +4,9 @@ import './home.css';
 function Home() {
 	return (
 		<div className='home-page'>
-			<section className='hero-section'>
-				<div className='hero-container'>
-					<div className='hero-image'>
+			<section className='section-padding bg-gradient-light'>
+				<div className='container flex-center'>
+					<div className='hero-image image-container'>
 						<img
 							src='/RoadsideShop.png'
 							alt='Sweets by Servis Roadside Shop'
@@ -14,7 +14,7 @@ function Home() {
 					</div>
 					<div className='hero-content'>
 						<h1>Welcome to Sweets by Servis</h1>
-						<p>
+						<p className='text-body'>
 							Hi! Sweets by Servis is your go-to roadside shop for delicious
 							homemade treats. We specialize in a variety of baked goods, from
 							cookies and cupcakes to rice crispy treats and more. Our mission
@@ -22,7 +22,7 @@ function Home() {
 						</p>
 						<Link
 							to='/about'
-							className='btn-primary'
+							className='btn btn-green'
 						>
 							About Us
 						</Link>
@@ -30,9 +30,9 @@ function Home() {
 				</div>
 			</section>
 
-			<section className='best-sellers-section'>
-				<div className='section-container'>
-					<h2>Check Out Our Best Sellers</h2>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container section-container'>
+					<h2 className='heading-large heading-dark'>Check Out Our Best Sellers</h2>
 					<div className='products-grid'>
 						<div className='product-card'>
 							<img
@@ -65,18 +65,18 @@ function Home() {
 					</div>
 					<Link
 						to='/products'
-						className='btn-secondary'
+						className='btn btn-green'
 					>
 						View all products
 					</Link>
 				</div>
 			</section>
 
-			<section className='events-section'>
-				<div className='events-container'>
+			<section className='section-padding bg-white'>
+				<div className='container flex-center'>
 					<div className='events-content'>
-						<h2>Upcoming Events</h2>
-						<p>
+						<h2 className='heading-large heading-dark'>Upcoming Events</h2>
+						<p className='text-body'>
 							We will be attending the Grand Rapids Christkindl Markt this
 							holiday season, where you can find us offering a selection of our
 							best-selling cookies, cupcakes, and rice crispy treats. Stay tuned
@@ -84,12 +84,12 @@ function Home() {
 						</p>
 						<Link
 							to='/events'
-							className='btn-primary'
+							className='btn btn-green'
 						>
 							View More Details
 						</Link>
 					</div>
-					<div className='events-image'>
+					<div className='events-image image-container'>
 						<img
 							src='/ChristKindlMarkt.jpg'
 							alt='Grand Rapids Christkindl Markt Event'
@@ -98,9 +98,9 @@ function Home() {
 				</div>
 			</section>
 
-			<section className='feedback-section'>
-				<div className='section-container'>
-					<h2>Our Customers Feedback</h2>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container section-container'>
+					<h2 className='heading-large heading-dark'>Our Customers Feedback</h2>
 					<div className='feedback-card'>
 						<p className='feedback-text'>
 							"Sweets by Servis has the most amazing homemade treats! Their

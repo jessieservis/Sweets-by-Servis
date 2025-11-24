@@ -4,8 +4,8 @@ import './about.css';
 function About() {
 	return (
 		<div className='about-page'>
-			<section className='about-section'>
-				<div className='about-container'>
+			<section className='section-padding bg-white'>
+				<div className='container about-container'>
 					<div className='about-image'>
 						<img
 							src='logo.png'
@@ -13,8 +13,8 @@ function About() {
 						/>
 					</div>
 					<div className='about-content'>
-						<h2>About Us</h2>
-						<p>
+						<h2 className='heading-large heading-dark'>About Us</h2>
+						<p className='text-body'>
 							Sweets by Servis is a family-owned bakery dedicated to creating
 							delicious and beautiful desserts for all occasions. Founded in
 							2010, we have been serving our community with high-quality baked
@@ -24,11 +24,11 @@ function About() {
 				</div>
 			</section>
 
-			<section className='mission-section'>
-				<div className='mission-container'>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container mission-container'>
 					<div className='mission-content'>
-						<h2>Our Mission</h2>
-						<p>
+						<h2 className='heading-large heading-pink'>Our Mission</h2>
+						<p className='text-body'>
 							Our mission is to bring joy and sweetness to every event through
 							our handcrafted desserts. We believe that every celebration
 							deserves a special treat, and we are committed to making each
@@ -44,8 +44,8 @@ function About() {
 				</div>
 			</section>
 
-			<section className='promise-section'>
-				<div className='promise-container'>
+			<section className='section-padding bg-white'>
+				<div className='container promise-container'>
 					<div className='promise-image'>
 						<img
 							src='StrawberryCrunchCupcakes.jpg'
@@ -53,8 +53,8 @@ function About() {
 						/>
 					</div>
 					<div className='promise-content'>
-						<h2>Our Promise</h2>
-						<p>
+						<h2 className='heading-large heading-pink'>Our Promise</h2>
+						<p className='text-body'>
 							We promise to deliver exceptional quality and taste in every
 							dessert. When shopping at Sweets by Servis, you can expect high
 							quality ingredients, safe preparation practices, and clean
@@ -65,13 +65,15 @@ function About() {
 				</div>
 			</section>
 
-			<section className='cta-section'>
-				<div className='cta-container'>
+			<section className='section-padding bg-gradient-pink'>
+				<div className='container cta-container'>
 					<div className='cta-content'>
-						<h2>Want To Know More About Us?</h2>
+						<h2 className='heading-large heading-pink'>
+							Want To Know More About Us?
+						</h2>
 						<Link
 							to='/registration'
-							className='btn-cta'
+							className='btn btn-pink'
 						>
 							Contact Us
 						</Link>
