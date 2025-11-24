@@ -88,7 +88,7 @@ export default function Events() {
 		<div className='events-page'>
 			<section className='events-hero'>
 				<div className='events-hero-container'>
-					<h1>Our Upcoming Events</h1>
+					<h1>Upcoming Events</h1>
 				</div>
 			</section>
 
