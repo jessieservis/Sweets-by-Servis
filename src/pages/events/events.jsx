@@ -1,99 +1,49 @@
 import './events.css';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useMemo } from 'react'
 import EVENTS from './events.json'
+import { DayPicker } from 'react-day-picker'
+import 'react-day-picker/dist/style.css'
+
+// helper: compare dates by year/month/day
+function sameDay(a, b) {
+	return (
+		a.getFullYear() === b.getFullYear() &&
+		a.getMonth() === b.getMonth() &&
+		a.getDate() === b.getDate()
+	)
+}
 
 function Calendar({ events, onStarClick }) {
-	const [currentDate, setCurrentDate] = useState(new Date())
+	// build a list of Date objects for days that have events
+	const eventDates = useMemo(
+		() => events.map((ev) => new Date(ev.date)),
+		[events]
+	)
 
-	const year = currentDate.getFullYear()
-	const month = currentDate.getMonth() // 0-based
-
-	// Get number of days in month
-	const daysInMonth = new Date(year, month + 1, 0).getDate()
-	const firstDay = new Date(year, month, 1).getDay()
-
-	// Map days -> events indices (event can fall on same day)
-	const eventsByDay = {}
-	events.forEach((ev, idx) => {
-		const d = new Date(ev.date)
-		if (d.getFullYear() === year && d.getMonth() === month) {
-			const dayNum = d.getDate()
-			if (!eventsByDay[dayNum]) eventsByDay[dayNum] = []
-			eventsByDay[dayNum].push(idx)
-		}
-	})
-
-	const dayCells = []
-	// empty cells before first day
-	for (let i = 0; i < firstDay; i++) dayCells.push(null)
-	for (let d = 1; d <= daysInMonth; d++) dayCells.push(d)
-
-	function prevMonth() {
-		setCurrentDate(new Date(year, month - 1, 1))
-	}
-
-	function nextMonth() {
-		setCurrentDate(new Date(year, month + 1, 1))
+	// find events indices for a given day
+	function eventsForDay(day) {
+		if (!day) return []
+		const res = []
+		events.forEach((ev, idx) => {
+			if (sameDay(new Date(ev.date), day)) res.push(idx)
+		})
+		return res
 	}
 
 	return (
 		<div className='calendar'>
 			<div className='calendar-header'>
-				<div className='month-nav'>
-					<button
-						className='month-nav-btn prev'
-						onClick={prevMonth}
-						aria-label='Previous month'
-					>
-						‹
-					</button>
-					<h3 className='month-title'>
-						{currentDate.toLocaleString(undefined, { month: 'long' })} {year}
-					</h3>
-					<button
-						className='month-nav-btn next'
-						onClick={nextMonth}
-						aria-label='Next month'
-					>
-						›
-					</button>
-				</div>
+				<h3>Events Calendar</h3>
 			</div>
-
-			<div className='calendar-grid'>
-				{['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((w) => (
-					<div
-						key={w}
-						className='calendar-weekday'
-					>
-						{w}
-					</div>
-				))}
-
-				{dayCells.map((d, i) => (
-					<div
-						key={i}
-						className={'day-cell' + (d ? '' : ' empty')}
-					>
-						{d && <div className='day-number'>{d}</div>}
-						{d && eventsByDay[d] && (
-							<div className='stars'>
-								{eventsByDay[d].map((eventIdx) => (
-									<button
-										key={eventIdx}
-										className='star'
-										onClick={() => onStarClick(eventIdx)}
-										title={events[eventIdx].title}
-										aria-label={`Open ${events[eventIdx].title}`}
-									>
-										★
-									</button>
-								))}
-							</div>
-						)}
-					</div>
-				))}
-			</div>
+			<DayPicker
+				mode='single'
+				onDayClick={(day) => {
+					const idxs = eventsForDay(day)
+					if (idxs.length) onStarClick(idxs[0])
+				}}
+				modifiers={{ hasEvent: eventDates }}
+				modifiersClassNames={{ hasEvent: 'has-event' }}
+			/>
 		</div>
 	)
 }
@@ -192,4 +142,4 @@ function Events() {
 	)
 }
 
-export default Events;
+export default Events

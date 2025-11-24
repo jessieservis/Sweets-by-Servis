@@ -251,3 +251,32 @@
 	.day-cell { min-height: 68px; }
 	.carousel-item { min-width: 260px; }
 }
+
+/* react-day-picker: show a large centered star that fills the day square */
+.rdp-day.has-event {
+	position: relative;
+	z-index: 1; /* place day content above the star pseudo */
+	padding: 6px; /* give room for the small date badge */
+	text-align: left; /* place the date toward top-left */
+	color: transparent; /* hide the numeric date when there's an event */
+	font-size: 13px;
+}
+.rdp-day.has-event::after {
+	content: '★';
+	position: absolute;
+	inset: 6px; /* small inset so star doesn't touch edges */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	color: #ffd166;
+	background: linear-gradient(180deg, rgba(255,241,204,0.95), rgba(255,223,128,0.9));
+	border-radius: 8px;
+	text-shadow: 0 2px 0 rgba(0,0,0,0.06);
+	z-index: 0; /* behind the day number */
+	pointer-events: none;
+}
+
+@media (max-width: 768px) {
+	.rdp-day.has-event::after { font-size: 18px; inset: 4px; }
+}
