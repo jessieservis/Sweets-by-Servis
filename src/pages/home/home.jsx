@@ -8,18 +8,22 @@ function Home() {
 				<div className='hero-container'>
 					<div className='hero-image'>
 						<img
-							src='../heroImage.png'
-							alt='Beautiful dessert cake'
+							src='/RoadsideShop.png'
+							alt='Sweets by Servis Roadside Shop'
 						/>
 					</div>
 					<div className='hero-content'>
-						<h1>Deliver You A Blissful Dessert In Every Bite</h1>
+						<h1>Welcome to Sweets by Servis</h1>
 						<p>
-							Lorem ipsum dolor sit amet consectetur. Tortor sem
-							in consequat enim vitae pellentesque. Massa aliquam
-							turpis pellentesque arcu varius et tincidunt.
+							Hi! Sweets by Servis is your go-to roadside shop for delicious
+							homemade treats. We specialize in a variety of baked goods, from
+							cookies and cupcakes to rice crispy treats and more. Our mission
+							is to bring joy to your taste buds with our delectable creations.
 						</p>
-						<Link to='/about' className='btn-primary'>
+						<Link
+							to='/about'
+							className='btn-primary'
+						>
 							About Us
 						</Link>
 					</div>
@@ -32,34 +36,37 @@ function Home() {
 					<div className='products-grid'>
 						<div className='product-card'>
 							<img
-								src='https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=400'
-								alt='Lemon cream dessert'
+								src='\chocolateChipCookies.jpg'
+								alt='Chocolate chip cookies'
 							/>
-							<h3>Lemon cream</h3>
+							<h3>Chocolate Chip Cookies</h3>
 						</div>
 						<div className='product-card'>
 							<img
-								src='https://images.pexels.com/photos/1120970/pexels-photo-1120970.jpeg?auto=compress&cs=tinysrgb&w=400'
-								alt='Lemon Balm dessert'
+								src='\PBChocolateRiceCrispyTreat.jpg'
+								alt='Peanut Butter Chocolate Rice Crispy Treat'
 							/>
-							<h3>Lemon Balm</h3>
+							<h3>Peanut Butter Chocolate Rice Crispy Treat</h3>
 						</div>
 						<div className='product-card'>
 							<img
-								src='https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400'
-								alt='Lemon spasm dessert'
+								src='\chocolateChipCookies.jpg'
+								alt='Chocolate chip cookies'
 							/>
-							<h3>Lemon spasm</h3>
+							<h3>Chocolate Chip Cookies</h3>
 						</div>
 						<div className='product-card'>
 							<img
-								src='https://images.pexels.com/photos/1028704/pexels-photo-1028704.jpeg?auto=compress&cs=tinysrgb&w=400'
-								alt='Lemon Balms dessert'
+								src='\cookiesAndCreamCupcakes.jpg'
+								alt='Cookies and Cream Cupcakes'
 							/>
-							<h3>Lemon Balms</h3>
+							<h3>Cookies and Cream Cupcakes</h3>
 						</div>
 					</div>
-					<Link to='/products' className='btn-secondary'>
+					<Link
+						to='/products'
+						className='btn-secondary'
+					>
 						View all products
 					</Link>
 				</div>
@@ -70,21 +77,22 @@ function Home() {
 					<div className='events-content'>
 						<h2>Upcoming Events</h2>
 						<p>
-							Lorem ipsum dolor sit amet consectetur. Tortor sem
-							in consequat enim vitae pellentesque. Massa aliquam
-							turpis pellentesque arcu varius et tincidunt. Purus
-							eget sit tristique volutpat aliquet et. Pretium et
-							eleifend mauris ultricies pharetra. Neque at
-							consectetur bibendum ullamcorper libero et.
+							We will be attending the Grand Rapids Christkindl Markt this
+							holiday season, where you can find us offering a selection of our
+							best-selling cookies, cupcakes, and rice crispy treats. Stay tuned
+							for more event announcements and we hope to see you there!
 						</p>
-						<Link to='/events' className='btn-primary'>
+						<Link
+							to='/events'
+							className='btn-primary'
+						>
 							View More Details
 						</Link>
 					</div>
 					<div className='events-image'>
 						<img
-							src='https://images.pexels.com/photos/1120970/pexels-photo-1120970.jpeg?auto=compress&cs=tinysrgb&w=600'
-							alt='Event cake display'
+							src='/ChristKindlMarkt.jpg'
+							alt='Grand Rapids Christkindl Markt Event'
 						/>
 					</div>
 				</div>
@@ -95,16 +103,19 @@ function Home() {
 					<h2>Our Customers Feedback</h2>
 					<div className='feedback-card'>
 						<p className='feedback-text'>
-							" Lorem ipsum dolor sit amet consectetur. Tortor sem
-							in consequat enim vitae pellentesque. Lorem ipsum
-							dolor sit amet en a libero et..."
+							"Sweets by Servis has the most amazing homemade treats! Their
+							cookies are always fresh and delicious, and their cupcakes are
+							moist and flavorful. I highly recommend their rice crispy treats
+							as well - they are the perfect combination of crispy and gooey.
+							The staff is friendly and welcoming, making every visit a
+							pleasure. I can't get enough of Sweets by Servis!"
 						</p>
 						<p className='customer-name'>Georgia Green</p>
 					</div>
 				</div>
 			</section>
 		</div>
-	);
+	)
 }
 
 export default Home;
