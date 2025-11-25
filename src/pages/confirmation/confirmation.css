@@ -90,6 +90,12 @@
 .detail-item {
 	display: flex;
 	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.detail-item:last-child {
+	margin-bottom: 0;
 }
 
 .detail-item label {
