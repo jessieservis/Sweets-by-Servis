@@ -126,7 +126,8 @@ function Registration() {
 					<div className='registration-form-wrapper'>
 						<h1>Account Registration</h1>
 						<p className='registration-subtitle'>
-							Learn about our events, new menu items, and special promotions!
+							Learn about our events, new products items, and special
+							promotions!
 						</p>
 						<form
 							onSubmit={handleSubmit}
