@@ -1,9 +1,45 @@
 import { Dropdown } from 'react-day-picker'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import './registration.css'
 
 function Registration() {
 	const navigate = useNavigate()
+	const [formData, setFormData] = useState({
+		email: '',
+		phone: '',
+		firstName: '',
+		lastName: '',
+		favoriteDessert: '',
+		notifyEmail: false,
+		notifyPhone: false,
+		password: '',
+	})
+
+	// Load existing data from sessionStorage when component mounts
+	useEffect(() => {
+		const savedEmail = sessionStorage.getItem('email')
+		const savedPhone = sessionStorage.getItem('phone')
+		const savedFirstName = sessionStorage.getItem('firstName')
+		const savedLastName = sessionStorage.getItem('lastName')
+		const savedFavoriteDessert = sessionStorage.getItem('favoriteDessert')
+		const savedNotifyEmail = sessionStorage.getItem('notifyEmail') === 'true'
+		const savedNotifyPhone = sessionStorage.getItem('notifyPhone') === 'true'
+		const savedPassword = sessionStorage.getItem('password')
+
+		if (savedEmail) {
+			setFormData({
+				email: savedEmail || '',
+				phone: savedPhone || '',
+				firstName: savedFirstName || '',
+				lastName: savedLastName || '',
+				favoriteDessert: savedFavoriteDessert || '',
+				notifyEmail: savedNotifyEmail,
+				notifyPhone: savedNotifyPhone,
+				password: savedPassword || '',
+			})
+		}
+	}, [])
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
@@ -95,6 +131,7 @@ function Registration() {
 						<form
 							onSubmit={handleSubmit}
 							className='registration-form'
+							key={formData.email || 'empty'}
 						>
 							<div className='form-group'>
 								<label htmlFor='email'>Email</label>
@@ -103,6 +140,7 @@ function Registration() {
 									id='email'
 									name='email'
 									placeholder='janesmith@email.com'
+									defaultValue={formData.email}
 								/>
 								<span className='error-message'></span>
 								<label htmlFor='phone'>Phone Number</label>
@@ -111,6 +149,7 @@ function Registration() {
 									id='phone'
 									name='phone'
 									placeholder='012-345-6789'
+									defaultValue={formData.phone}
 								/>
 								<span className='error-message'></span>
 								<div className='name-row'>
@@ -121,6 +160,7 @@ function Registration() {
 											id='first name'
 											name='first name'
 											placeholder='Jane'
+											defaultValue={formData.firstName}
 										/>
 										<span className='error-message'></span>
 									</div>
@@ -131,6 +171,7 @@ function Registration() {
 											id='last name'
 											name='last name'
 											placeholder='Doe'
+											defaultValue={formData.lastName}
 										/>
 										<span className='error-message'></span>
 									</div>
@@ -139,6 +180,7 @@ function Registration() {
 								<select
 									id='favorite-dessert'
 									name='favorite-dessert'
+									defaultValue={formData.favoriteDessert}
 								>
 									<option value=''>Select a dessert...</option>
 									<option value='cookies'>Cookies</option>
@@ -154,6 +196,7 @@ function Registration() {
 											type='checkbox'
 											id='notify-email'
 											name='notify-email'
+											defaultChecked={formData.notifyEmail}
 										/>
 										<span>Email</span>
 									</label>
@@ -162,6 +205,7 @@ function Registration() {
 											type='checkbox'
 											id='notify-phone'
 											name='notify-phone'
+											defaultChecked={formData.notifyPhone}
 										/>
 										<span>Phone</span>
 									</label>
@@ -173,6 +217,7 @@ function Registration() {
 									id='password'
 									name='password'
 									placeholder='********'
+									defaultValue={formData.password}
 								/>
 								<span className='error-message'></span>
 							</div>
