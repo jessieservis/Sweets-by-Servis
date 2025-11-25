@@ -4,17 +4,18 @@ A demo website for a homemade bakery stand showcasing products, events, and cust
 
 ## Features
 
-- **Home Page** - Hero section with featured desserts, best sellers, upcoming events, and customer feedback
+- **Home Page** - Hero section with welcome message, best sellers showcase, and upcoming events preview
 - **About Page** - Company information, mission, promise, and contact CTA
 - **Products Page** - Product categories including cookies, waffles, macaroons with filtering
-- **Events Page** - Upcoming events showcase with detailed event information
-- **Registration Page** - Email registration form for newsletters and promotions
+- **Events Page** - Interactive calendar with event carousel for browsing upcoming events
+- **Registration Page** - Email registration form with name and phone number for monthly newsletters and promotions
 
 ## Tech Stack
 
 - React 18
-- React Router DOM
-- Vite
+- React Router DOM v6
+- React Day Picker v8 (for calendar functionality)
+- Vite 5
 - CSS3
 
 ## Setup Instructions
@@ -43,7 +44,7 @@ npm run preview
 
 ```
 src/
-├── components/      # Shared components (Header, Footer)
+├── components/     # Shared components (Header, Footer)
 ├── pages/          # Page components (Home, About, Products, Events, Registration)
 ├── App.jsx         # Main app with routing
 ├── main.jsx        # React entry point
