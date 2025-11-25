@@ -1,7 +1,10 @@
 import { Dropdown } from 'react-day-picker'
+import { useNavigate } from 'react-router-dom'
 import './registration.css'
 
 function Registration() {
+	const navigate = useNavigate()
+
 	const handleSubmit = (e) => {
 		e.preventDefault()
 
@@ -73,9 +76,8 @@ function Registration() {
 			sessionStorage.setItem('notifyPhone', notifyPhone)
 			sessionStorage.setItem('password', password)
 
-			// Submit the form or show success message
-			alert('Registration successful! Your information has been saved.')
-			e.target.reset()
+			// Navigate to confirmation page
+			navigate('/confirmation')
 		}
 
 		document.getElementById('email').focus()
@@ -110,30 +112,30 @@ function Registration() {
 									name='phone'
 									placeholder='012-345-6789'
 								/>
-							<span className='error-message'></span>
-							<div className='name-row'>
-								<div className='form-field'>
-									<label htmlFor='first name'>First Name</label>
-									<input
-										type='given-name'
-										id='first name'
-										name='first name'
-										placeholder='Jane'
-									/>
-									<span className='error-message'></span>
+								<span className='error-message'></span>
+								<div className='name-row'>
+									<div className='form-field'>
+										<label htmlFor='first name'>First Name</label>
+										<input
+											type='given-name'
+											id='first name'
+											name='first name'
+											placeholder='Jane'
+										/>
+										<span className='error-message'></span>
+									</div>
+									<div className='form-field'>
+										<label htmlFor='last name'>Last Name</label>
+										<input
+											type='family-name'
+											id='last name'
+											name='last name'
+											placeholder='Doe'
+										/>
+										<span className='error-message'></span>
+									</div>
 								</div>
-								<div className='form-field'>
-									<label htmlFor='last name'>Last Name</label>
-									<input
-										type='family-name'
-										id='last name'
-										name='last name'
-										placeholder='Doe'
-									/>
-									<span className='error-message'></span>
-								</div>
-							</div>
-							<label htmlFor='favorite-dessert'>Favorite Dessert</label>
+								<label htmlFor='favorite-dessert'>Favorite Dessert</label>
 								<select
 									id='favorite-dessert'
 									name='favorite-dessert'
